@@ -1,54 +1,44 @@
-# One hundred posters per week
+# Transformations
 
 Design by Code  
 Bram Bogaerts  
 [b.bogaerts@artez.nl](mailto:b.bogaerts@artez.nl)
 
-Semester 1
+Semester 2
 
 ## Assignment
 
-This assignment is an introduction to producing form with code. Each week, we will cover a new programming concept. Using the concepts addressed, you will create a set of Processing sketches to produce 100 posters each week. Of these 100, you will make a selection of the five best.
+What does it mean to transform something? In speaking about transformation, one thinks of an “original” and an “altered” state. These states are abound in nature, politics, technology, art, humanities, perception, culture and more or less every other thing in reality.
 
-The idea is to use randomness, repetition, interaction, and data to create dynamic systems that can produce an infinite number of unique results. The 100 posters you will bring each week will be but a small selection of possible outcomes.
+Think about a transformation in nature: a caterpillar becoming a butterfly, or the leaves changing from “green and attached to a tree” to “brown and laying on the ground”. Bigger transformations happen as well: global warming not only transforms our climate, it also drives a transformation in our perceptions of the planet as well as other people, and ultimately transforms our politics as well. Transformations can be divisive or unifying. They can be physical or ephemeral, tactile or mental.
 
-The 100 posters should represent a range of experimentation and come from a number of different staring points.
+Your task will be to narrow the broad theme of “transformation” down to a scope that you find interesting as a research topic. You will then record a piece of reality – this can be in any medium, as long as you can load the recorded data, photograph, sound, etc. in to your coding environment. Your will then create three transformations of this recording using code. These transformations are informed by the theme you have defined yourself. The medium for these transformations is also free – the end result can be a film, a soundscape, an interactive installation, or anything else, as long as you have used code to get there.
+
+As always, as a class you will be responsible together for the final presentation of your work. Discuss what each of you needs to exhibit your original and three transformations, and divide tasks in order to produce the final presentation.
+
 
 ## Goals
 
-- Learning the basic principles of programming
-- Applying these principles using Processing
 - Creating form through code
 - Iterating on ideas, sketches and designs
+- Observing and recording reality
+- Altering recorded reality using code
+- Improving technical abilities
+- Self-learning coding and analysing coding problems
 
 ## Roadmap
 
-- Weeks 1 – 6: Five new Processing sketches each week, twenty posters per sketch = one hundred posters per week
-- Week 7: Selection of five best posters printed at A1 format, digital display of every poster generated
-- Week 8: Discussion, review and grading
-
-Topics discussed:
-
-- Week 1: Introduction to computers, code, art and design
-- Week 2: Variables
-- Week 3: Conditionals, transformations and color
-- Week 4: Loops and functions
-- Week 5: Nested loops and grids
-- Week 6: Arrays and pixels
-- Week 7: Objects
+-	Week 1: The assignment in one week: produce a transformation of a picture you took yourself.
+-	Week 2: Narrow down the theme of transformations to a topic you will research. Begin your visual research, start recording and gathering. Sketches.
+-	Week 3: Continued recording. Sketches.
+-	Week 4: Continued recording. Sketches. Direction for outcome.
+-	Week 5:  Sketches, development, programming, execution.
+-	Week 6:  Sketches, development, programming, execution. Outcome nearly complete, discuss and implement refinements and improvements.
+-	Week 7: Final presentation
 
 ## Criteria
 
-- To what extent have you explored different programming principles?
-- How well have you iterated on every sketch, in order to explore new forms?
-- How much does each sketch differ from the previous? How much breadth does the entire collection of sketches have?
-- How creative, inviting and original are the posters?
-
-## Literature
-
-- Casey Reas – Process Compendium
-- Bloomberg – What is Code? 
-- LUST, Casey Reas, Chandler McWilliams – Form and Code in Design, Art and Architecture
-- Harmut Bohnacker, Benedikt Groß, Julia Laub – Generative Design: Visualize, Program and Create with Processing
-- Daniel Shiffman – Learning Processing: A Beginner’s Guide to Programming Images, Animation and Interaction
-- Daniel Shiffman – The Nature of Code
+-	How well did you manage to narrow down a broad theme to an individual topic?
+-	How well do your recordings fit your topic?
+-	Technical abilities – were you able to translate your ideas into code that produces interesting results?
+-	Originality and ideation – is the end result enticing and original?
