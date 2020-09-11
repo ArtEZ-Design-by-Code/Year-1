@@ -32,17 +32,17 @@ void keyPressed() {
   record = true;
 }
 
+String filename = "output-" + year() + "-" + month() + "-" + day() + "-" + hour() + "-" + minute() + "-" + second();
+
 void setup() {
   size(594, 841);
-}
-
-void draw() {
-  String filename = "output-" + year() + "-" + month() + "-" + day() + "-" + hour() + "-" + minute() + "-" + second();
-  
-  if (record) beginRecord(PDF, "output/PDF/" + filename + ".pdf");
   
   background(255);
   
+  beginRecord(PDF, "output/PDF/" + filename + ".pdf");
+}
+
+void draw() {
   yourPosterCode();
   
   if (record) endRecord();
