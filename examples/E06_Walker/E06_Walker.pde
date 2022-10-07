@@ -1,20 +1,29 @@
-float x = 300;
-float y = 400;
+float x = 250;
+float y = 250;
+
+float speed = 5;
 
 void setup() {
-  size(594, 841);
+  size(500, 500);
   background(255);
 }
 
 void draw() {
-  float size = 10;
-  float speed = 5;
+  stroke(0, 50);
+  noFill();
   
-  fill(61);
-  stroke(0);
+  rectMode(CENTER);
+  circle(x, y, 30);
   
-  ellipse(x, y, size, size);
+  float rX = round(random(-1, 1)) * 15;
+  float rY = round(random(-1, 1)) * 15;
   
-  x = x + random(-speed, speed);
-  y = y + random(-speed, speed);
+  x += rX;
+  y += rY;
+  
+  x += width;
+  y += height;
+  
+  x %= width;
+  y %= height;
 }
