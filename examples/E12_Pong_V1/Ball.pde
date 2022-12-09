@@ -6,7 +6,7 @@ class Ball {
 	float size;
 
 	Ball() {
-		size = 12;
+		size = 16;
 	}
 
 	void resetPosition() {
@@ -47,6 +47,7 @@ class Ball {
 
 	void display() {
 		fill(255);
+		noStroke();
 
 		pushMatrix();
 		translate(x, y);
