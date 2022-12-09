@@ -15,8 +15,8 @@ class Ball {
 	}
 
 	void randomizeSpeed() {
-		xSpeed = random(-2, 2);
-		ySpeed = random(-2, 2);
+		xSpeed = random(-3, 3);
+		ySpeed = random(-3, 3);
 	}
 
 	void move() {
@@ -25,33 +25,53 @@ class Ball {
 	}
 
 	void bounce() {
-		if (y <= size / 2) {
+		if (top() <= 0) {
 			ySpeed = abs(ySpeed);
-		} else if (y >= height - size / 2) {
+		} else if (bottom() >= height) {
 			ySpeed = -abs(ySpeed);
 		}
 	}
 
-	void checkBounds() {
-		if (x <= size / 2 || x >= width - size / 2) {
+	int checkBounds() {
+		if (left() <= 0) {
 			resetPosition();
 			randomizeSpeed();
+
+			return -1;
+		} else if (right() >= width) {
+			resetPosition();
+			randomizeSpeed();
+
+			return 1;
 		}
+
+		return 0;
 	}
 
 	void update() {
 		move();
-		checkBounds();
 		bounce();
 	}
 
 	void display() {
 		fill(255);
 		noStroke();
+		rect(left(), top(), size, size);
+	}
 
-		pushMatrix();
-		translate(x, y);
-		rect(-size / 2, -size / 2, size, size);
-		popMatrix();
+	float top() {
+		return y - size / 2;
+	}
+
+	float bottom() {
+		return y + size / 2;
+	}
+
+	float left() {
+		return x - size / 2;
+	}
+
+	float right() {
+		return x + size / 2;
 	}
 }
