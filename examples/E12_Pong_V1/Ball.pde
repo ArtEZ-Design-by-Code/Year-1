@@ -4,9 +4,11 @@ class Ball {
 	float xSpeed;
 	float ySpeed;
 	float size;
+	float speed;
 
 	Ball() {
 		size = 16;
+		speed = 3;
 	}
 
 	void resetPosition() {
@@ -48,7 +50,20 @@ class Ball {
 		return 0;
 	}
 
+	void normalizeSpeed() {
+		float lengthOfSpeedVector = sqrt(
+			pow(xSpeed, 2) + pow(ySpeed, 2)
+		);
+
+		xSpeed /= lengthOfSpeedVector;
+		ySpeed /= lengthOfSpeedVector;
+
+		xSpeed *= speed;
+		ySpeed *= speed;
+	}
+
 	void update() {
+		normalizeSpeed();
 		move();
 		bounce();
 	}

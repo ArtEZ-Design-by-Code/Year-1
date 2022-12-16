@@ -6,6 +6,8 @@ Paddle playerPaddle;
 int playerScore;
 int enemyScore;
 
+float maxEnemySpeed = 2;
+
 void setup() {
 	size(640, 480);
 	
@@ -30,8 +32,17 @@ void setup() {
 void draw() {
 	background(0);
 
-	float enemyDistanceToBall = ball.y - enemyPaddle.y;
-	enemyPaddle.ySpeed = enemyDistanceToBall;
+	float enemyDistanceToBallY = ball.y - enemyPaddle.y;
+	float enemyDistanceToBallX = abs(ball.x - enemyPaddle.x);
+	
+	enemyPaddle.ySpeed = enemyDistanceToBallY;
+	enemyPaddle.maxSpeed = map(
+		enemyDistanceToBallX,
+		0,
+		width,
+		maxEnemySpeed,
+		0
+	);
 
 	enemyPaddle.update();
 	enemyPaddle.display();
@@ -63,6 +74,16 @@ void draw() {
 		if (ball.right() >= playerPaddle.left()) {
 			// Collission with player paddle!
 			ball.xSpeed = -abs(ball.xSpeed);
+
+			float newYSpeed = map(
+				ball.y,
+				playerPaddle.top(),
+				playerPaddle.bottom(),
+				-3,
+				3
+			);
+
+			ball.ySpeed = newYSpeed;
 		}
 	}
 	
@@ -74,6 +95,16 @@ void draw() {
 		if (ball.left() <= enemyPaddle.right()) {
 			// Collission with enemy paddle!
 			ball.xSpeed = abs(ball.xSpeed);
+
+			float newYSpeed = map(
+				ball.y,
+				enemyPaddle.top(),
+				enemyPaddle.bottom(),
+				-3,
+				3
+			);
+
+			ball.ySpeed = newYSpeed;
 		}
 	}
 
@@ -82,9 +113,17 @@ void draw() {
 
 	if (side == -1) {
 		playerScore++;
+		ball.speed++;
+		maxEnemySpeed+=0.2;
 	} else if (side == 1) {
 		enemyScore++;
+		ball.speed--;
+		maxEnemySpeed-=0.2;
 	}
+
+	maxEnemySpeed = constrain(maxEnemySpeed, 0.5, 3);
+
+	ball.speed = max(ball.speed, 3);
 
 	ball.display();
 
